@@ -1,6 +1,6 @@
 ---
 slug: ja-jp/real-world-development/vscode
-title: "VS Code"
+title: "Visual Studio Code"
 authors:
   - geektrainer
 lastUpdated: 2026-06-30
@@ -34,7 +34,7 @@ VS Code の **[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/c
 > 有料プランをお持ちでない場合、認証済みの学生は [GitHub Education][callout-student-plan-education] を通じて GitHub Copilot を無料で利用できます。**Copilot Student** プランには、このワークショップで使うエージェント、MCP、コードレビュー、Copilot CLI の機能が含まれるため、どのコースも完了できます。
 
 [callout-student-plan-education]: https://github.com/education/students
-## 始める
+## はじめる
 
 **[演習 0: 前提条件から始める →][ex0]**
 

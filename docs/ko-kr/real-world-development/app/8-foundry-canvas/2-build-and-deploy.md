@@ -17,7 +17,7 @@ next:
 이 모듈을 마치면 다음을 갖추게 됩니다.
 
 - 패키징한 카탈로그 데이터와 집중 테스트를 포함하는 에이전트 기본 구조
-- 카탈로그 및 대화의 각 승인 기준에 대한 로컬 검증 증거
+- 카탈로그 및 대화의 각 인수 기준에 대한 로컬 검증 증거
 - 배포 후 Foundry에서 다시 테스트한 에이전트 버전
 
 ## 시나리오
@@ -44,7 +44,7 @@ Canvas는 Backer Concierge를 기존 모델 배포에 연결하는 코드, 폴�
 4. **Create new hosted agents** 미리 보기에서 다음을 입력합니다.
 
    ```plaintext
-   Scaffold a hosted agent named Backer Concierge in agent/backer-concierge, connected to the tailspin-toys project and the model deployment I just confirmed. Use Microsoft Agent Framework with the Responses API. Ground it in db/catalog.json and ensure it meets the acceptance criteria in this issue. Keep a single azure.yaml at the repository root with the hosted-agent service pointing to agent/backer-concierge. Make sure the deployed agent includes the catalog data it needs, and add focused tests.
+   agent/backer-concierge에 Backer Concierge라는 호스팅 에이전트의 기본 구조를 만듭니다. 에이전트를 tailspin-toys 프로젝트와 방금 확인한 모델 배포에 연결합니다. Responses API와 함께 Microsoft Agent Framework를 사용합니다. db/catalog.json을 근거 자료로 사용하고 이슈의 인수 기준을 충족하는지 확인합니다. 호스팅 에이전트 서비스가 agent/backer-concierge를 가리키는 azure.yaml 파일 하나를 리포지토리 루트에 유지합니다. 배포된 에이전트에 필요한 카탈로그 데이터가 포함되도록 하고 범위가 명확한 테스트를 추가합니다.
    ```
 
    Canvas는 프롬프트와 현재 구독 및 Foundry 프로젝트 컨텍스트를 Copilot에 전달합니다. Agent Framework + Responses API 샘플을 검색하며, **Agent with Local Tools (Responses, Agent Framework, Python)** 같은 선택 항목이 나타날 수 있습니다.
@@ -136,7 +136,7 @@ Canvas는 Backer Concierge를 기존 모델 배포에 연결하는 코드, 폴�
 
     예상 결과: 두 번째 응답은 첫 번째 응답의 두 게임만 언급하고 카탈로그 평점을 올바르게 비교합니다.
 
-15. 모든 응답을 `db/catalog.json` 및 이슈의 승인 기준과 비교합니다. 에이전트가 게임, 퍼블리셔, 평점, 펀딩 총액, 후원자 수, 가격, 플레이어 수, 플레이 시간, 출시일을 절대 지어내지 않는지 확인합니다. Agent Inspector가 오류를 보고하거나 응답이 그라운딩 범위를 벗어나면 결과를 Canvas 프롬프트 영역에 복사하고 Copilot에 수정하도록 요청합니다. 변경할 때마다 로컬 검사를 다시 시작하고 실패한 테스트를 다시 실행한 다음, 배포하기 전에 여섯 가지 검사를 모두 통과하는지 확인합니다.
+15. 모든 응답을 `db/catalog.json` 및 이슈의 인수 기준과 비교합니다. 에이전트가 게임, 퍼블리셔, 평점, 펀딩 총액, 후원자 수, 가격, 플레이어 수, 플레이 시간, 출시일을 절대 지어내지 않는지 확인합니다. Agent Inspector가 오류를 보고하거나 응답이 그라운딩 범위를 벗어나면 결과를 Canvas 프롬프트 영역에 복사하고 Copilot에 수정하도록 요청합니다. 변경할 때마다 로컬 검사를 다시 시작하고 실패한 테스트를 다시 실행한 다음, 배포하기 전에 여섯 가지 검사를 모두 통과하는지 확인합니다.
 
 ## 호스팅 에이전트 배포 및 재테스트
 
